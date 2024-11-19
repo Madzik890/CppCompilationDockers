@@ -7,3 +7,5 @@ RUN dpkg --add-architecture arm64 && apt update && apt upgrade -y && apt update 
 RUN ln -s /usr/bin/aarch64-linux-gnu-g++-10 /usr/bin/aarch64-linux-gnu-g++ && ln -s /usr/bin/aarch64-linux-gnu-gcc-10 /usr/bin/aarch64-linux-gnu-gcc
 
 COPY aarch64-linux-gnu-ldd /usr/bin
+
+RUN apt install -y libwiringpi-dev:arm64
