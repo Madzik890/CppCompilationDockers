@@ -8,6 +8,7 @@ RUN apt update
 RUN apt -y install gcc g++ valgrind cmake 
 RUN apt -y install python3 pip
 RUN apt -y install nano mc
+RUN rm /usr/lib/python3.*/EXTERNALLY-MANAGED
 RUN pip install conan
 RUN conan profile detect
 
