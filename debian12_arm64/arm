@@ -1,0 +1,25 @@
+[settings]
+os=Linux
+arch=armv8
+compiler=gcc
+compiler.version=14
+compiler.libcxx=libstdc++11
+build_type=Release
+
+[buildenv]
+CONAN_CMAKE_FIND_ROOT_PATH=/usr/aarch64-linux-gnu
+CHOST=aarch64-linux-gnu
+AR=/usr/bin/aarch64-linux-gnu-ar
+AS=/usr/bin/aarch64-linux-gnu-as
+RANLIB=/usr/bin/aarch64-linux-gnu-ranlib
+CC=/usr/bin/aarch64-linux-gnu-gcc-12
+CXX=/usr/bin/aarch64-linux-gnu-g++-12
+LD=/usr/bin/aarch64-linux-gnu-ld
+STRIP=/usr/bin/aarch64-linux-gnu-strip
+CFLAGS= -O2 -Wformat=2 -Wall -Wextra -Winline -fPIE -fPIC -I/usr/aarch64-linux-gnu/include/
+CXXFLAGS= -fPIE -fPIC  -I/usr/aarch64-linux-gnu/include/
+LDFLAGS= -pie
+PKG_CONFIG_PATH=/usr/aarch64-linux-gnu/lib/pkgconfig
+
+[conf]
+tools.build:compiler_executables={"c": "/usr/bin/aarch64-linux-gnu-gcc-12", "cpp": "/usr/bin/aarch64-linux-gnu-g++-12"}
