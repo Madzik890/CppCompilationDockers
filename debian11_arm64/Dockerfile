@@ -25,3 +25,10 @@ RUN apt -y install gcc-10-base:arm64 krb5-locales libc6:arm64 libcom-err2:arm64 
 RUN dpkg -i /root/libwiringpi2_2.50-0ubuntu1_arm64.deb
 RUN dpkg -i /root/libwiringpi-dev_2.50-0ubuntu1_arm64.deb
 RUN dpkg -i /root/wiringpi_2.50-0ubuntu1_arm64.deb
+
+RUN apt -y install libgl-dev:arm64 libgl-dev:arm64 xkb-data:arm64 libx11-xcb-dev:arm64 libice-dev:arm64 libx11-dev:arm64 libx11-xcb-dev:arm64 libfontenc-dev:arm64 libice-dev:arm64 libsm-dev:arm64 libxau-dev:arm64 libxaw7-dev:arm64
+RUN apt install -y libxcomposite-dev:arm64 libxcursor-dev:arm64 libxdamage-dev:arm64 libxfixes-dev:arm64 libxi-dev:arm64 libxinerama-dev:arm64 libxkbfile-dev:arm64 libxmuu-dev:arm64 libxrandr-dev:arm64 libxrender-dev:arm64 libxres-dev:arm64 libxss-dev:arm64 libxtst-dev:arm64 libxv-dev:arm64 libxxf86vm-dev:arm64 libxcb-glx0-dev:arm64 libxcb-render0-dev:arm64 libxcb-render-util0-dev:arm64 libxcb-xkb-dev:arm64 libxcb-icccm4-dev:arm64 libxcb-image0-dev:arm64 libxcb-keysyms1-dev:arm64 libxcb-randr0-dev:arm64 libxcb-shape0-dev:arm64 libxcb-sync-dev:arm64 libxcb-xfixes0-dev:arm64 libxcb-xinerama0-dev:arm64 libxcb-dri3-dev:arm64 uuid-dev:arm64 libxcb-cursor-dev:arm64 libxcb-dri2-0-dev:arm64 libxcb-present-dev:arm64 libxcb-composite0-dev:arm64 libxcb-ewmh-dev:arm64 libxcb-res0-dev:arm64
+RUN apt install -y libxcb-util-dev:arm64 libxcb-util0-dev:arm64
+RUN apt install -y pkg-config
+
+RUN export PKG_CONFIG_PATH=/usr/lib/aarch64-linux-gnu/pkgconfig/
