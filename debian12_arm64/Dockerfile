@@ -25,4 +25,6 @@ RUN apt install -y libxcomposite-dev:arm64 libxcursor-dev:arm64 libxdamage-dev:a
 RUN apt install -y libxcb-util-dev:arm64 libxcb-util0-dev:arm64
 RUN apt install -y pkg-config
 
+RUN apt install -y libgles2-mesa-dev:arm64 libdbus-1-dev:arm64
+
 RUN export PKG_CONFIG_PATH=/usr/lib/aarch64-linux-gnu/pkgconfig/
